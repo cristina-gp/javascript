@@ -1,0 +1,11 @@
+/* Estilos de la página */
+#bordes{
+border: solid 2px black;
+background-color: aqua;
+  width: 200px;
+    height: 250px;
+   align-items: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}

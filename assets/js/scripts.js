@@ -1,17 +1,50 @@
-// Busca en el HTML el elemento con id="consola" (el botón "Imprimir en consola")
-// y lo guarda en la constante imp_cons para poder usarlo desde JavaScript.
-// El id va entre comillas porque es un texto (string), no una variable.
-const imp_cons=document.getElementById("consola")
+const imp_cons=document.getElementById("consola");
+const cuerpo=document.getElementById("cuerpo");
+const titulo=document.getElementById("title");
+const boton=document.getElementById("boton");
+const alinear=document.getElementById("alinearcentro");
+const bordes=document.getElementById("bordes");
+const invisible=document.getElementById("invisible");
+const ocultar=document.getElementById("ocultar");
+const desaparece=document.getElementById("desaparece");
+const perro=document.getElementById("perro");
+const foto=document.getElementById("foto");
+const disney=document.getElementById("disney");
 
-// Añade un "escuchador de eventos" al botón: cada vez que el usuario haga
-// clic ("click"), se ejecutará la función flecha que se pasa como segundo argumento.
+
 imp_cons.addEventListener("click", ()=>{
-    // Muestra el mensaje en la consola del navegador (F12 > pestaña Consola).
-    console.log("esto es un evento")
-})
+const imagen=document.createElement("img");
+titulo.textContent="Hola Mundo";
+titulo.style.fontSize="360px";
+imagen.src="https://media.istockphoto.com/id/636379014/es/foto/manos-la-formaci%C3%B3n-de-una-forma-de-coraz%C3%B3n-con-silueta-al-atardecer.jpg?s=612x612&w=0&k=20&c=R2BE-RgICBnTUjmxB8K9U0wTkNoCKZRi-Jjge8o_OgE=";
+imagen.style.width="300px";
+cuerpo.appendChild(imagen);
+});
+boton.addEventListener("click",() =>{
+    document.body.style.backgroundColor="red";   
+});
 
-// Busca el elemento con id="cuerpo" (la etiqueta <body> del HTML)
-// y lo guarda en la constante cuerpo. De momento no se usa, pero
-// servirá para modificar el contenido o el estilo de la página más adelante.
-const cuerpo=document.getElementById("cuerpo")
+alinear.addEventListener("click", ()=>{
+    alinear.style.textAlign="center";
+});
+bordes.addEventListener("click", ()=>{
+    bordes.style.borderRadius ="20px";
+});
+ocultar.addEventListener("click", ()=>{
+    invisible.style.color="white";
+});
+desaparece.addEventListener("click",() =>{
+    desaparece.style.display="none";
+    });
+
+perro.addEventListener("click",() =>{
+    foto.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTul2RdESWQAkfUNuVBLOJnn_7jHdEYmQ_ZzN5GDecKwA&s=10";
+    foto.style.width="250px";
+   });
+disney.addEventListener("click",() =>{
+  disney.href="https://es.wikipedia.org/wiki/Wikipedia:Portada";  
+    });
+
+
+
 
