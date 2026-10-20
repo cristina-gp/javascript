@@ -10,6 +10,10 @@ const desaparece=document.getElementById("desaparece");
 const perro=document.getElementById("perro");
 const foto=document.getElementById("foto");
 const disney=document.getElementById("disney");
+const nombre=document.getElementById("nombre");
+const rellenar=document.getElementById("rellenar");
+const apagado=document.getElementById("apagado");
+
 
 
 imp_cons.addEventListener("click", ()=>{
@@ -21,7 +25,13 @@ imagen.style.width="300px";
 cuerpo.appendChild(imagen);
 });
 boton.addEventListener("click",() =>{
-    document.body.style.backgroundColor="red";   
+    document.body.style.backgroundColor="red"; 
+});
+
+boton.addEventListener("click",() =>{
+   const parrafo=document.createElement("p");
+   parrafo.textContent="Me he clonado!";
+   cuerpo.appendChild(parrafo);
 });
 
 alinear.addEventListener("click", ()=>{
@@ -45,6 +55,10 @@ disney.addEventListener("click",() =>{
   disney.href="https://es.wikipedia.org/wiki/Wikipedia:Portada";  
     });
 
+rellenar.addEventListener("click",() =>{
+    nombre.value="Hola, soy un robot";
+});
 
-
-
+apagado.addEventListener("click",() =>{
+    apagado.disabled=true;
+});
